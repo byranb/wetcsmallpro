@@ -1,0 +1,83 @@
+.page {
+  width: 750rpx;
+}
+
+.page_bd {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-bottom:0rpx;
+}
+
+.extension_my {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin: auto;
+  background-color: rgba(245, 255, 245, 1);
+  width: 100%;
+  justify-content: space-around;
+  height: 190rpx; 
+}
+
+.extension_data {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.data_mon {
+  font-size: 24rpx;
+  color: rgba(150, 150, 150, 1);
+}
+
+.extension_person {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.person_data {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  height: 150rpx;
+  align-items:center;
+  border-bottom: 1rpx solid #DCDCDC;
+  position: relative;
+}
+.data_title{
+  font-size:48rpx;
+  color:rgba(81,170,56,1);
+}
+
+.person_data image {
+  width: 107rpx;
+  height: 107rpx;
+  border-radius: 15rpx;
+  margin:0 30rpx 0 60rpx;
+}
+
+.person_info {
+  display: flex;
+  flex-flow: column;
+}
+
+.person_name {
+  font-size: 32rpx;
+  color: rgba(50, 50, 50, 1);
+  font-weight: bold;
+}
+
+.person_time {
+  font-size: 24rpx;
+  color: rgba(150, 150, 150, 1);
+}
+
+.person_status{
+  position: absolute;
+  right: 60rpx;
+  top: 35rpx;
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "钱包",
+  "usingComponents": {
+    "van-dialog": "../../dist/dialog/index"
+  }
+}

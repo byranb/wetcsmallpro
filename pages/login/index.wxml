@@ -1,0 +1,24 @@
+<view class="page">
+  <view class="page_hd">
+  </view>
+  <view class="page_bd page_bd_spacing">
+   <view class='login_title'>欢迎登录微ETC</view>
+   <view class='login_input'>
+    <van-cell-group>
+      <van-field value="{{ username }}" name="phone" size="large" maxlength="11" clearable placeholder="请输入手机号码" border="{{ false }}"  bind:change="changePhone" />
+      <van-field value="{{ sms }}" center name="code" size="large" maxlength="6"  clearable  placeholder="请输入验证码" border="{{ false }}"
+      bind:change="changeSms" use-button-slot>
+        <van-button slot="button" size="small" type="default" bind:click="getCode" custom-class="login_code" >{{code}}</van-button>
+      </van-field>
+    </van-cell-group>
+    </view>
+    <button class="login_btn" bindtap='login' type="primary">登录</button>
+  </view>
+  <view class='page_ft'>
+    <button class='login_wx' type='default' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        <text class='login_wx_title'>微信授权手机号登录</text>
+        <image class='login_wx_image' src='/images/pic/wx.png'></image>
+    </button>
+  </view>
+<van-toast id="van-toast" />
+</view>

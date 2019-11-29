@@ -1,0 +1,29 @@
+<view class="page">
+  <view class='page_hd'>
+     
+  </view>
+  <view class='page_bd'>
+       <view class='success_examine'>
+          <image src='../../images/pic/examine.png'></image>
+          <text>资料上传成功，请等待审核！</text>
+          <!-- <button type='default' bindtap='myETC'>查看审核状态</button> -->
+      </view>
+      <view class='success_open'>
+        <text class='open_text'>为了后续您的正常使用你还需要开\n通免密支付和自动续费功能，\n以便激活ETC卡</text>
+        <button type='primary' bindtap='opening' class='open_btn' size='mini'>开通免密及续费功能</button>
+      </view>
+      
+  </view>
+  <!-- <view class='page_ft'> -->
+    <!-- <view class='success_public'>
+        <text class='public_title'>关注 <text style='color:#5BB664;font-weight: bold;'>车主云</text> 微信公众号\n每周三、周六领取车主云红包</text>
+        <view class='public_logo'>
+          <image src="{{logo_src}}"></image>
+          <text style='margin: 20rpx 0;color: #323232;'>车主云</text>
+        </view>
+        <view class='public_content'>车主公众号的介绍信息，仅以下信息为占位人们的买车观念也在发生变化，对车后服务的需求正在深刻转变，创业者开始深耕到细分领域去外挖掘可以变现的服务。</view>
+        <view class='public_explain'>130篇原创文章\t17位朋友关注</view>
+        <view class='public_btn'>关注公众号</view>
+      </view> -->
+  <!-- </view> -->
+</view>

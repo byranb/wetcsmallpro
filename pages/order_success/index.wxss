@@ -1,0 +1,129 @@
+.page{
+  width: 750rpx;
+  /* height: 1215rpx; */
+  background-color: #ffffff;
+}
+.page_bd{
+  width: 100%;
+  padding-bottom:400rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  margin: auto;
+  background-color: #ffffff;
+   position: absolute;
+  bottom: 0rpx;
+  left: 0rpx;
+  top: 40rpx;
+}
+
+.page_ft{
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  /* height: 860rpx; */
+  width: 100%;
+  padding-bottom: 0rpx;
+}
+
+.success_examine{
+  display: flex;
+  align-items: center;
+  /* margin: auto; */
+  flex-flow: column;
+  margin-bottom: 15rpx;
+}
+.success_examine image{
+  width: 300rpx;
+  height: 172rpx;
+  margin-bottom: 20rpx;
+}
+.success_examine text{
+  font-size:32rpx;
+  color:rgba(50,50,50,1);
+   margin-bottom: 20rpx;
+}
+.success_examine button{
+  width: 270rpx;
+  font-size:28rpx !important;
+  height: 80rpx;
+  line-height:2.8  !important;
+}
+.success_open{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  /* border-top: 1rpx solid rgba(150,150,150,1); */
+  /* margin: 30rpx auto; */
+}
+.open_text{
+  font-size:24rpx;
+  color:rgba(50,50,50,1);
+  /* margin-right: 100rpx; */
+  margin-top: 20rpx;
+  text-align: center;
+}
+.open_btn{
+  text-align: center;
+  margin-top: 40rpx;
+  width: 390rpx;
+  font-size:32rpx !important;
+  height: 85rpx;
+  line-height:2.5 !important;
+}
+.success_public{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: auto;
+}
+.public_title{
+  font-size:32rpx;
+  color:rgba(50,50,50,1);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50rpx;
+} 
+
+.public_logo{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.public_logo image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius:50%;
+}
+
+.public_logo text{
+  font-size:32rpx;
+  color:rgba(50,50,50,1);
+}
+.public_content{
+  font-size:26rpx;
+  color:rgba(50,50,50,1);
+  width: 575rpx;
+  margin-bottom: 30rpx;
+  text-align:left;
+}
+.public_explain{
+  font-size:22rpx;
+  color:rgba(150,150,150,1);
+  margin-bottom: 50rpx;
+}
+
+.public_btn{
+  font-size:26rpx;
+  color: #5F6E94; 
+  margin-bottom: 50rpx;
+}
+.public_btn :active{
+  color:rgba(150,150,150,1);
+}
+

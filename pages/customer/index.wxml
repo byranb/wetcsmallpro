@@ -1,0 +1,7 @@
+<view class="page">
+  <view class='page_bd'>
+    <text class='customer_title'>每天09:00 - 17:00为你提供咨询服务</text>
+    <text class='customer_phone'>{{tel}}</text>
+    <button type="primary" bindtap='call' class='customer_sub' >点击拨打</button>
+  </view>
+</view>

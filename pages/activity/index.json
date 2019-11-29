@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "6.18活动申请",
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-transition": "../../dist/transition/index",
+    "van-dialog": "../../dist/dialog/index",
+    "van-popup": "../../dist/popup/index",
+    "keyboard": "/components/keyboard/keyboard"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "ETC俱乐部",
+  "usingComponents": {
+    "v-panel": "../../components/vehicle-panel/index",
+    "van-dialog": "../../dist/dialog/index"
+  }
+}

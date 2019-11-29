@@ -1,0 +1,98 @@
+<view class="page">
+  <view class="page_hd">
+    <van-nav-bar
+  title="ETC申请"
+  left-arrow
+  fixed="true"
+  bind:click-left="onClickLeft"
+/>
+  </view>
+  <view class='page_bd'>
+    <view class='apply_title'>请输入要办理ETC的车牌号</view>
+    <view class='apply_input'>
+      <view wx:for="{{carNo}}" wx:key="item" wx:for-index="i" bindtap='setCurrentCarNo' data-index="{{i}}" class="plate-nums-first {{currentIndex==i?'plate-nums-foc plate-nums-anim':''}} {{i==7?'energy':''}} ">
+        <view wx:if="{{i==7 && isSpeical}}" class="special">
+          <text style='font-weight:bold;font-size:30rpx;line-height:30rpx;'>+</text>
+          <text>新能源</text>
+        </view>
+        <text class="plate-num-text">{{item}}</text>
+      </view>
+    </view>
+    <view class='apply-desc'>
+      <view class='apply_buy'>
+        <view class='apply_buy_price'>抢购价
+          <text>￥99</text>
+        </view>
+        <view class='apply_buy_origin'>原价288</view>
+        <button bindtap='recCoupons' wx:if="{{isBind}}" size="mini" type="primary" class='apply_buy_btn' disabled='{{!agreement}}'>立即下单</button>
+        <button wx:else open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" size="mini" type="primary" class='apply_buy_btn' disabled='{{!agreement}}'>立即下单</button>
+      </view>
+      <view class='apply_checkbox'>
+      <checkbox class='apply_agree' bindtap='agreeAgreement' checked="{{agreement}}">已阅读并同意</checkbox><text class='apply_agreement' bindtap='showAgreement'>《微ETC用户服务协议》</text>
+      </view>
+      <view class='apply_msg'>*仅支持7座及7座以下车辆办理</view>
+    </view>
+    <view class='apply-flow'>
+      <view class='apply_title'>现在办理ETC即送199元车主云红包</view>
+      <view class='apply-intro'>
+        <image src='/images/pic/spead-coupons.png'></image>
+        <image src='/images/pic/video-coupons.png'></image>
+        <image src='/images/pic/car-coupons.png'></image>
+        <image src='/images/pic/flash-coupons.png'></image>
+      </view>
+      <view class='apply_title'>
+        <text class='green-border'>办理流程</text>
+      </view>
+      <view class='apply-intro flow-intro'>
+        <view class='flow'>填写车牌</view>
+        <view class='flow-line'></view>
+        <view class='flow'>上传资料</view>
+        <view class='flow-line'></view>
+        <view class='flow'>审核激活</view>
+        <view class='flow-line'></view>
+        <view class='flow'>安装使用</view>
+      </view>
+    </view>
+      
+    <view class='apply_title'>
+      <text class='green-border'>ETC优势</text>
+    </view>
+    <view class='superiority-intro'>
+      <view class='superiority'>
+        <view class='superiority-item'>
+          <image src='/images/pic/1st.png'></image>
+        </view>
+        <view class='superiority-item'>
+          <image src='/images/pic/2nd.png'></image>
+        </view>
+        <view class='superiority-item'>
+          <image src='/images/pic/3rd.png'></image>
+        </view>
+        <view class='superiority-item'>
+          <image src='/images/pic/4th.png'></image>
+        </view>
+      </view>
+      <view class='compare'>
+        <image src='/images/pic/compare.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='page_ft'>
+    <keyboard id="keyboard" index="{{currentIndex}}" show="{{showKeyboard}}" bind:valueChange="valueChange"></keyboard>
+    <van-dialog use-slot show="{{ isRec }}" show-confirm-button="{{false}}" close-on-click-overlay>
+      <view class='coupons_rec'>
+        <image src='../../images/pic/close.png' class='rec_close' bindtap='resClose'></image>
+        <text class='rec_title'>支付金额</text>
+        <text style='font-size:56rpx;color:rgba(81,170,56,1);'>￥99</text>
+        <view class='rec_sub'>
+          <button type="primary" bindtap='pay'>支付</button>
+        </view>
+      </view>
+    </van-dialog>
+    <view class='apply_ad'>
+      <image class='ad_images' src='{{etcApplyExplain}}'></image>
+    </view>
+    <van-toast id="van-toast" />
+  </view>
+
+</view>

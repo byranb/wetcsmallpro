@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/index",
+    "pages/login/index",
+    "pages/coupons/index",
+    "pages/apply/index",
+    "pages/money/index",
+    "pages/order/index",
+    "pages/order_success/index",
+    "pages/my_etc/index",
+    "pages/settings/index",
+    "pages/club/index",
+    "pages/waiting/index",
+    "pages/customer/index",
+    "pages/extension/index",
+    "pages/consumption/index",
+    "pages/use_coupons/index",
+    "pages/help/index",
+    "pages/agreement/index",
+    "pages/activity/index"
+  ],
+  "window": {
+    "backgroundColor":"#F8F8F8",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#47C16F",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/pic/index-off.png",
+        "selectedIconPath": "/images/pic/index-on.png",
+        "text":"首页"
+      },
+      {
+        "pagePath": "pages/coupons/index",
+        "iconPath": "/images/pic/coupons-off.png",
+        "selectedIconPath": "/images/pic/coupons-on.png",
+        "text": "抢红包"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "/images/pic/person-off.png",
+        "selectedIconPath": "/images/pic/person-on.png",
+        "text":"个人中心"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList":[
+    "wxf027cc32bfa26828"
+  ],
+  "usingComponents": {
+    "van-toast": "dist/toast/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

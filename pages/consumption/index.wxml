@@ -1,0 +1,58 @@
+<view class="page">
+    <view class='page_hd'>
+      <view class='select_date' bindtap='popupShow'>
+        <text>{{currentYear}} 年 </text>
+        <text>{{currentMonth}} 月</text>
+        <image src='/images/pic/bottom.png' class='select_img'></image>
+      </view>
+    </view>
+     <block wx:if="{{consumptionList.length > 0}}">
+    <view class='page_bd'>
+      <view class='consumption'>
+        <view class='consumption_data'>
+          <view class='consumption_total'>本月消费
+            <text style='font-size:60rpx;font-weight:bold;color:rgba(81,170,56,1);'>{{total}}</text> 元</view>
+          <!-- <view class='consumption_number'>03208888213312</view> -->
+        </view>
+        <view class='consumption_record' wx:for='{{consumptionList}}' wx:key='item' wx:for-index='i'>
+          <view class='record_area'>
+              <text class='area_name'>{{item.inStationName?item.inStationName:'-'}}</text>
+              <image src='/images/pic/jt.png' class='area_img'></image>
+              <!-- <text class='area_name'> —— </text> -->
+              <text class='area_name'>{{item.stationName?item.stationName:'-'}}</text>
+          </view>
+          <view class='record_medium'>
+            <view class='record_time'>
+              <text class='time_title'>入站时间</text>
+              <text class='time_val'>{{item.inOpTime}}</text>
+            </view>
+            <view class='record_time'>
+              <text class='time_title'>出站时间</text>
+              <text class='time_val'>{{item.opTime}}</text>
+            </view>
+          </view>
+          <view class='record_money'>
+              <view class='money_all'>
+              <text>账单金额：￥{{item.highwayAmount}}</text>
+              <text>抵扣金额：￥{{item.discountAmount}}</text>
+              </view>
+              <text class='money_actual'>实付金额：<text style='color:#FF0000;'>￥{{item.amout}}</text></text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='page_ft'>
+    
+    </view>
+  </block>
+  <block wx:else>
+    <view class='no_data'>
+      <image src='/images/pic/no-con.png'></image>
+      <text>本月暂无消费记录</text>
+    </view>
+  </block>
+    <van-popup show="{{ popup }}" position="bottom" overlay="{{ true }}" bind:close="popupClose">
+        <van-datetime-picker type="year-month" value="{{ currentDate }}" bind:input="onInput" bind:change="onChange" bind:confirm="popupClose" bind:cancel="popupClose" />
+      </van-popup>
+  <van-toast id="van-toast" />
+</view>

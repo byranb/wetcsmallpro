@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "消费记录",
+  "usingComponents": {
+    "van-datetime-picker": "../../dist/datetime-picker/index",
+    "van-popup": "../../dist/popup/index"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "填写订单信息",
+  "usingComponents": {
+    "van-tab": "../../dist/tab/index",
+    "van-tabs": "../../dist/tabs/index",
+    "van-area": "../../dist/area/index",
+    "van-popup": "../../dist/popup/index"
+  }
+}

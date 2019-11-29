@@ -1,0 +1,172 @@
+@import "../coupons/index.wxss";
+
+page,.page{
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+.coupons {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  /* border: 1rpx solid #323232; */
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  width: 720rpx;
+  height: 172rpx;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+  z-index: 0;
+  background-color: #FFF4F4;
+  border-radius: 22rpx;
+}
+
+.coupons_left{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 96rpx;
+  height: 120rpx;
+  align-items:center;
+ 
+}
+
+.coupons_image {
+  padding: 0;
+  z-index:1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.coupons_price{
+  font-size:16rpx;
+  font-weight:bold;
+  font-family:Times-Bold;
+  color:#fff;
+  margin-top: 10rpx;
+}
+
+.coupons_price text{
+  font-size:40rpx;
+  font-weight: normal;
+  font-family: PingFang SC;
+  color:#fff;
+}
+
+.info_title{
+  font-size:32rpx;
+  font-weight: bold;
+  font-family: PingFang SC;
+  color:#000000;
+}
+
+.info_explain{
+  font-size:24rpx;
+  color: rgba(0, 0, 0, 0.32);
+  /* border: 1rpx solid #C0C0C0; */
+  /* border-radius: 15rpx; */
+  width:300rpx;
+  text-align:left;
+}
+
+.coupons_info{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  height:140rpx;
+  /* margin-left:30rpx; */
+  width: 64%;
+}
+
+.coupons_btn {
+  width: 162rpx;
+  height: 64rpx;
+  border-radius: 35rpx;
+  font-size:24rpx;
+  color:#fff !important;
+  line-height:2.5 !important;
+  padding: 0 !important;
+  background-color: #D35045 !important;
+}
+
+.coupons_rec_money {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  /* justify-content: center; */
+  width: 100%;
+  height: 836rpx;
+  position: relative;
+  border-radius:5;
+}
+
+.rec_explain{
+  background-color: #D35045;
+  height: 218rpx;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+}
+
+.rec_explain :first-child{
+  font-family: PingFang SC;
+  font-size: 48rpx;
+}
+
+.rec_close_money{
+  width: 48rpx;
+  height: 48rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 30rpx 30rpx;
+}
+
+.rec_explain text{
+  font-size: 24rpx;
+}
+
+.rec_title_money {
+  font-size: 28rpx;
+  color: #D35045;
+  font-family: PingFang SC;
+  width: 535rpx;
+  height: 62rpx;
+  border: 1px solid #D35045;
+  box-sizing: border-box;
+  border-radius: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50rpx 0;
+}
+
+.rec_tip_text {
+  font-family: PingFang SC;
+  font-size: 24rpx;
+  color: rgba(0, 0, 0, 0.87);
+  margin-bottom:10rpx;
+  text-align:left;
+  width: 85%;
+}
+
+.rec_sub {
+  width: 192rpx;
+  height: 80rpx;
+  margin: 30rpx 0 30rpx 0;
+  font-size:24rpx !important;
+  background-color: #D35045 !important;
+  border-radius: 35px;
+  color: #FFFFFF;
+  line-height: 3.2;
+}

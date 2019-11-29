@@ -1,0 +1,41 @@
+<view class="page">
+  <view class='page_hd'>
+      <van-nav-bar
+  title="我的ETC卡"
+  left-arrow
+  fixed="true"
+  bind:click-left="onClickLeft"
+/>
+  </view>
+  <view class='page_bd'>
+    <block wx:if="{{hasDate}}">
+      <block wx:if="{{etcCards.length > 0}}">
+        <view class='myetc' wx:for='{{etcCards}}' wx:key='item' wx:for-index='i' data-state='{{item.state}}' data-vehicle-plate='{{item.vehiclePlate}}' data-vehicle-state='{{item.vehicleOwnerServiceState}}' data-order-id='{{item.orderId}}' bindtap='currentRecord'>
+          <image class='myetc_img' src='/images/pic/card-c.png'></image>
+          <text class='myetc_state' wx:if="{{item.state=='1'}}">待支付</text>
+          <text class='myetc_state' wx:elif="{{item.state=='2'}}">已支付</text>
+          <text class='myetc_state' wx:elif="{{item.state=='3'}}">待审核</text>
+          <text class='myetc_state myetc_wait' wx:elif="{{item.state=='4'}}">待激活</text>
+          <text class='myetc_state' wx:elif="{{item.state=='5'}}">已激活</text>
+          <text class='myetc_state' wx:elif="{{item.state=='6'}}">审核不通过</text>
+          <text class='myetc_state' wx:elif="{{item.state=='7'}}">已退款</text>
+          <text class='myetc_state' wx:elif="{{item.state=='0'}}">已失效</text>
+          <text class='myetc_vehicle_plate'>{{item.vehiclePlate}}</text>
+          <text class='myetc_orderId'>{{item.cardId?item.cardId:''}}</text>
+          <!-- <text class='myetc_name'>{{userInfo.nickName}}</text> -->
+          <text class='myetc_info' decode = "{{true}}">{{userInfo.nickName}}&nbsp;&nbsp;&nbsp;{{item.mobilePhone}}</text>
+          <!-- <text class='myetc_number'>{{item.vehiclePlate}}</text> -->
+        </view>
+      </block>
+      <block wx:else>
+        <view class='no_data'>
+          <image src='/images/pic/no-con.png'></image>
+          <text>您暂时没有正在申请的ETC卡</text>
+        </view>
+      </block>
+    </block>
+  </view>
+  <view class='page_ft'>
+    <van-toast id="van-toast" />
+  </view>
+</view>

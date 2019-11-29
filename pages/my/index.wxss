@@ -1,0 +1,156 @@
+.page_hd {
+  width: 750rpx;
+  height: 403rpx;
+  padding: 20rpx 0rpx 0rpx 0rpx;
+}
+
+.page_bd{
+  width: 750rpx;
+  padding-bottom: 0rpx;
+  background-color: #ffffff;
+  position: absolute;
+  top: 443rpx;
+  bottom: 0rpx;
+  left: 0rpx;
+}
+
+.my_card {
+  position: relative;
+  border-radius: 25rpx;
+  width: 720rpx;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  /* background-image: url('../../images/pic/my-card.png') */
+  /* background-color: #50b65b; */
+}
+.my-card-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.my_head {
+  margin: 0 30rpx 0 50rpx;
+}
+
+.my_head_image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  border: 6rpx solid #fff;
+}
+
+.my_info {
+  font-size: 27rpx;
+}
+
+.my_info_name {
+  font-size: 32rpx;
+  font-family: MicrosoftYaHei;
+  font-weight: bold;
+  color: #815E1A;
+}
+
+.my_info_phone {
+  display: flex;
+  font-size: 30rpx;
+  font-family: MyriadPro-Bold;
+  font-weight: bold;
+  color: #815E1A;
+}
+
+.my_setting {
+  width: 28rpx;
+  height: 30rpx;
+  position: absolute;
+  right:250rpx;
+  top: 72rpx;
+}
+.my_equity {
+  display: flex;
+  justify-content: center;
+  padding-top: 40rpx;
+  margin: auto;
+}
+
+.my_equity_button {
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+  box-sizing: border-box;
+  width: 173rpx;
+  align-items: center;
+  font-size: 25rpx;
+}
+.my_equity_image{
+  width: 55rpx;
+  height: 55rpx;
+}
+.my_equity_text{
+  color: #323232;
+  margin-top: 20rpx;
+}
+.my_fun_title {
+  margin-left: 20rpx;
+  font-size: 32rpx !important;
+  color: rgba(17, 17, 17, 1);
+}
+
+.my_getinfo{
+  background-color: rgba(255,255,255,0);
+  color: #323232;
+  font-size: 32rpx !important;
+  width: 380rpx;
+  height: 80rpx;
+  margin-left:-50rpx;
+  margin-top:15rpx;
+}
+
+button::after{
+  border: none;
+}
+
+
+.etc_fun_btn {
+  background-color: #fff !important;
+  display: flex;
+  align-items: center;
+  height: 105rpx;
+  border-radius: 0;
+  justify-content: space-between;
+  width: 90%;
+  box-shadow: 0px -1px 1px -1px #ececec inset;
+}
+
+.etc_fun_bin {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.etc_fun_left {
+  width: 30rpx;
+  height: 28rpx;
+  margin-right:30rpx;
+}
+
+.etc_fun_right {
+  width: 16rpx;
+  height: 32rpx;
+}
+
+.etc_fun_title {
+  font-size: 32rpx !important;
+  color: rgba(50, 50, 50, 1);
+}
+
+.etc_fun_tx{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}

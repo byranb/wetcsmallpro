@@ -1,0 +1,27 @@
+.page_bd {
+  display: flex;
+  width: 750rpx;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.page_bd image {
+  width: 376rpx;
+  height: 380rpx;
+}
+
+.page_bd text {
+  font-size: 24rpx;
+  color: rgba(150, 150, 150, 1);
+}
+
+.page_ft{
+  padding-bottom: 0rpx;
+}

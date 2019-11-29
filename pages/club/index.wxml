@@ -1,0 +1,70 @@
+<view class="page">
+  <view class="page_hd">
+  </view>
+  <view class='page_bd'>
+  <block wx:if="{{hasDate}}">
+    <block wx:if="{{hasClub}}">
+      <view class='hasClub'>
+        <view class='clubs_info'>
+          <view class='clubs_title'>{{clubName}}({{clubCode}})</view>
+          <view class='clubs_vip'>
+            <image class='clubs_vip_img' src='/images/pic/vip{{vipLev}}.png'></image>
+            <text class='clubs_vip_grade '>{{vipLev=='1'?'普通会员':'VIP会员'}}</text>
+            <text class='clubs_vip_up' wx:if="{{vipLev=='1'}}" bindtap='levelVIP'>升级vip会员</text>
+            <text class='clubs_vip_exit' bindtap='showDialog'>退出俱乐部</text>
+          </view>
+        </view>
+        <view class='clubs_qr'>
+          <image class='clubs_qr_bg' src='{{qrImage}}'></image>
+        </view>
+        <!-- <view class='clubs_extension' bindtap='myExtension'>
+         查看我的推广记录
+      </view> -->
+        <view class='clubs_btn'>
+          <button type="default" bindtap='savePic' class='clubs_sub'>保存到手机</button>
+           <button type="default" bindtap='refleshClubQR' class='clubs_sub'>刷新海报</button>
+          <button type="default" bindtap='myExtension' class='clubs_sub'>查看推荐记录</button>
+        </view>
+        <van-dialog use-slot show="{{ isRec }}" show-confirm-button="{{false}}" close-on-click-overlay>
+          <view class='club_rec'>
+            <text class='rec_title'>确定退出此俱乐部吗？</text>
+            <text class='rec_name'>{{clubName}}</text>
+            <view class='rec_sub'>
+              <button type="default" bindtap='canerJoin'>取消</button>
+              <button type="primary" bindtap='exitClub'>确定</button>
+            </view>
+            <!-- <image src='/images/pic/etc-loading.gif' class='etc_loading'></image> -->
+          </view>
+        </van-dialog>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='noClub'>
+        <image class='etc_ad' src='/images/pic/club-ad.png'></image>
+        <view class='etc_title'>请输入ETC俱乐部卡号</view>
+        <view class='etc_input'>
+          <view class='etc_input_item' bindtap='changeInput' wx:for='{{codeArray}}' wx:key='item' wx:for-index='i'>
+            <text>{{item}}</text>
+          </view>
+        </view>
+        <button type="primary" size="mini" class='etc_sub' bindtap='showDialog'>立即加入</button>
+      </view>
+       <van-dialog use-slot show="{{ isRec }}" show-confirm-button="{{false}}" close-on-click-overlay>
+      <view class='club_rec'>
+        <text class='rec_title'>确定加入此俱乐部吗？</text>
+        <text class='rec_tip_text'>{{clubCode}}</text>
+        <text class='rec_title'>{{clubName}}</text>
+        <view class='rec_sub'>
+          <button type="default" bindtap='canerJoin'>取消</button>
+          <button type="primary" bindtap='joinClub'>确定</button>
+        </view>
+      </view>
+    </van-dialog>
+       <v-panel is-show="{{isShow}}" bindok="inputOk" binddelete="inputDelete" bindinputchange="inputChange" key-board-type="3" backgroundColor="#DADADA" />
+    </block>
+  </block>
+  </view>
+  <view class='page_ft'>
+    <van-toast id="van-toast" />
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<view class="page">
+  <view class="page_hd">
+  </view>
+  <view class='page_bd'>
+  <view class='use'>
+     <view class='use_title'>请向商家出示此码</view>
+      <view class='use_qr'>
+        <image class='use_back' src='/images/pic/use-back.png'></image>
+        <image class='use_erw' src="{{qrcodeURL}}" ></image>
+      </view>
+      <view class='explain_title'>
+        <view class='explain_line'></view>
+        <text> 使用规则 </text> 
+        <view class='explain_line'></view>
+      </view>
+      <view class='use_explain'>
+             <view class='explain_role'>
+              1. 关于优惠券的使用: 在报价确认页面、订购确认页面输入优惠券代码,并点击「使用」即可使用优惠券。 如果需要取消或变更优惠券,请点击「变更
+             </view>
+             <view class='explain_role'>
+              2.关于优惠券的使用: 在报价确认页面、订购确认页面输入优惠券代码,并点击
+             </view>
+      </view>
+      </view>
+  </view>
+</view>

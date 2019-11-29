@@ -1,0 +1,77 @@
+<view class="page">
+ <block wx:if="{{hasDate}}">
+<block wx:if="{{couponList.length > 0}}">
+  <view class='page_hd'></view>
+  <view class='page_bd'>
+    <view class='coupons' wx:for='{{couponList}}' wx:key='item' wx:for-index='i'>
+      <!-- <image class='coupons_bg' src='/images/pic/bg{{item.state}}.png'></image> -->
+      <view class='coupons_left'>
+       <image class='coupons_image' src='../../images/pic/hongbao.png'>
+       </image> 
+       <view class='coupons_price'>￥<text>{{item.money}}</text></view>
+        <!-- <view class='coupons_price'>￥<text>{{item.money}}</text></view> -->
+        <!-- <view class='coupons_limit'>满300公里可用</view> -->
+      </view> 
+      <view class='coupons_info'>
+        <view class='info_title'>{{item.money}}元{{item.couponName}}</view>
+        <view class='info_explain'>{{item.couponDesc}}</view>
+        <!-- <view class='info_date {{item.state == 0?"notyet_font":"yet_font"}}'>{{item.activateTime}}</view> -->
+      </view>
+      <view class='coupons_receive'>
+      <!-- {{item.state == 0?"notyet":"yet"}} -->
+        <button type='primary' wx:if="{{item.canUse == 1}}" data-money='{{item.money}}' data-coupon-name='{{item.couponName}}' bindtap='recCoupons' class='coupons_btn '>使用说明</button>
+        <button type='primary' wx:else bindtap='toUse' class='coupons_btn '>去使用</button>
+      </view>
+    </view>
+  </view>
+  <view class='page_ft'>
+    <van-dialog use-slot show="{{ isRec }}" show-confirm-button="{{false}}" close-on-click-overlay >
+      <view class='coupons_rec_money'>
+        <!-- <image src='../../images/pic/close.png' class='rec_close' bindtap='resClose'></image> -->
+        <!-- <text class='rec_title'>请搜索\n <text style='font-size:56rpx;color:rgba(81,170,56,1);'>车主云微ETC</text> \n微信公众号使用红包</text> -->
+         <!-- <view class='explain_title'>
+        <view class='explain_line'></view>
+        <text class='rec_tip'>提示信息</text>
+        <view class='explain_line'></view>
+        </view> -->
+        <!-- <text class='rec_tip_text'>车主云红包仅限办理 ETC 的会员可以领取！\n现在办理即送 199 元车主云红包。</text> -->
+        <!-- <button type="primary" class='rec_sub' bindtap='applyETC'>立即办理</button>  -->
+        <image src='../../images/pic/icon_close.png' class='rec_close_money' bindtap='resCloseMoney'></image>
+        <view class='rec_explain'>
+            <text>{{currentMoney}}\t元{{currentCouponName}}</text>
+            <text>使用说明</text>
+        </view>
+        <text class='rec_title_money'>开通ETC后更能领价值199元大红包</text>
+        <text class='rec_tip_text'>1. 本劵仅为首次开通车主云微ETC 的车主福利。</text>
+        <text class='rec_tip_text'>2. 本劵在公众号【车主云微ETC】激活后，过高速自动冲抵现金使用。</text>
+        <text class='rec_tip_text'>3. 本劵不可叠加使用，不找零，不兑换现金。</text>
+        <text class='rec_tip_text'>4.  本劵有效期为激活后一个月内，请有效期内使用。</text>
+        <button type="primary" class='rec_sub' bindtap='applyETC'>立即办理</button>
+        </view>
+    </van-dialog>
+
+    <van-dialog use-slot show="{{ toUse }}" show-confirm-button="{{false}}" close-on-click-overlay >
+      <view class='coupons_rec'>
+        <image src='../../images/pic/close.png' class='rec_close' bindtap='resClose'></image> 
+       <text class='rec_title'>请搜索\n <text style='font-size:56rpx;color:rgba(81,170,56,1);'>车主云微ETC</text> \n微信公众号使用红包</text>
+         <!-- <view class='explain_title'>
+        <view class='explain_line'></view>
+        <text class='rec_tip'>提示信息</text>
+        <view class='explain_line'></view> -->
+        </view>
+        <!-- <text class='rec_tip_text'>车主云红包仅限办理 ETC 的会员可以领取！\n现在办理即送 199 元车主云红包。</text> -->
+        <!-- <button type="primary" class='rec_sub' bindtap='applyETC'>立即办理</button>  -->
+    </van-dialog>
+
+    <van-toast id="van-toast" />
+  </view>
+</block>
+<block wx:else>
+     <view class='no_data'>
+       <image src='/images/pic/no-con.png'></image>
+      <text>你暂时还没有红包呢</text>
+    </view>
+</block>
+</block>
+ <van-toast id="van-toast" />
+</view>

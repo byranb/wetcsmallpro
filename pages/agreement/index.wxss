@@ -1,0 +1,26 @@
+.page{
+  display: flex;
+  flex-flow:column;
+  align-items: center;
+  background-color:#fff;
+}
+
+.page_hd{
+  font-size: 38rpx;
+  color: rgba(50, 50, 50, 1);
+  font-weight: bold;
+  text-align: center;
+}
+
+.page_bd{
+  width: 680rpx;
+}
+.agreement{
+  font-size: 26rpx;
+}
+
+.agreement .title{
+  font-size: 32rpx;
+  color: rgba(50, 50, 50, 1);
+  font-weight: bold;
+}

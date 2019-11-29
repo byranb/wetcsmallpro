@@ -1,0 +1,195 @@
+.page_hd {
+  padding: 0rpx;
+  height: 80rpx;
+}
+
+.page_bd{
+  width: 750rpx;
+  padding-bottom:0rpx;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 80rpx;
+}
+
+.select_date{
+  height: 100%;
+  width: 300rpx;
+  padding-left: 30rpx;
+  line-height: 80rpx;
+}
+
+.select_date text{
+  font-size:28rpx;
+  color:rgba(34,34,34,1);
+}
+
+.select_img{
+ width:36rpx;
+ height:24rpx;
+}
+
+.consumption {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+}
+
+.consumption_data {
+  height: 200rpx;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* border-bottom: 1rpx solid #dcdcdc; */
+}
+
+.consumption_total {
+  font-size: 32rpx;
+  color: rgba(50, 50, 50, 1);
+}
+
+.consumption_number {
+  font-size: 28rpx;
+  color: rgba(150, 150, 150, 1);
+}
+
+.record_place {
+  font-size: 24rpx;
+  font-weight: blod;
+  color: rgba(50, 50, 50, 1);
+}
+
+.record_time {
+  font-size: 24rpx;
+  color: rgba(150, 150, 150, 1);
+}
+
+.record_price {
+  font-size: 24rpx;
+  color: rgba(81, 170, 56, 1);
+}
+
+.no_data {
+  display: flex;
+  width: 750rpx;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+  top: 80rpx;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.no_data image {
+  width: 460rpx;
+  height: 340rpx;
+}
+
+.no_data text {
+  font-size: 24rpx;
+  color: rgba(150, 150, 150, 1);
+}
+
+.consumption_record {
+  display: flex;
+  flex-flow: column;
+  height: 400rpx;
+  width: 95%;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5rpx;
+  box-shadow: #D8D8D8 2rpx 2rpx 5rpx 5rpx;
+  margin: 15rpx 0;
+}
+
+.record_medium{
+  height: 110rpx;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.record_area{
+  background-color: #F1F1F1;
+  width: 95%;
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.record_money{
+  background-color: #F1F1F1;
+  width: 95%;
+  height: 110rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.area_name{
+  font-size: 40rpx;
+  font-weight:bold;
+  color: #323232;
+  width: 40%;
+  text-align: center;
+}
+
+.area_img{
+  width: 72rpx;
+  height: 72rpx;
+  position: absolute;
+  left:0;right:0;
+  top:0;bottom:0;
+  margin:auto;
+}
+
+.time_title{
+   font-size: 24rpx;
+   color: #969696;
+   margin-left: 22rpx;
+}
+
+.time_val{
+  font-size: 36rpx;
+  color: #323232;
+  margin-left: 22rpx;
+}
+
+.record_time{
+  background-color: #F1F1F1;
+  width: 45%;
+  height: 100rpx;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+.money_all{
+  display: flex;
+  flex-flow: column;
+  align-items:flex-start;
+  justify-content: space-around;
+  font-size: 24rpx;
+  color: #969696;
+  margin-left: 25rpx;
+}
+
+.money_actual{
+  font-size: 36rpx;
+  color: #969696;
+  margin-right: 30rpx;
+}
+
+
+

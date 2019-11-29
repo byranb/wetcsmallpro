@@ -1,0 +1,33 @@
+.page_bd {
+  display: flex;
+  width: 750rpx;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  padding-bottom:700rpx;
+}
+
+.customer_title {
+  font-size: 24rpx;
+  color: rgba(150, 150, 150, 1);
+  margin: 20rpx;
+}
+
+.customer_phone {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: rgba(50, 50, 50, 1);
+}
+
+.customer_sub {
+  width: 340rpx;
+  height: 85rpx;
+  margin: 60rpx 0 30rpx 0;
+  font-size:32rpx !important;
+}

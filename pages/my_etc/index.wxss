@@ -1,0 +1,113 @@
+.page_hd{
+  padding: 10rpx;
+}
+.page_bd{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: auto;
+  padding-top: 128rpx;
+  padding-bottom: 20rpx;
+}
+.myetc{
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  width: 700rpx;
+  height: 426rpx;
+  margin: 15rpx 0 15rpx 0;
+}
+.myetc_img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.myetc_name{
+  font-size:36rpx;
+  font-weight:bold;
+  color:rgba(50,50,50,1);
+  margin: 20rpx 0 10rpx 30rpx;
+}
+
+.myetc_state{
+  width: 150rpx;
+  height: 50rpx;
+  border:1px solid #FFFFFF;
+  border-radius:25rpx;
+  font-size:24rpx;
+  color:#FFFFFF;
+  text-align: center;
+  position: absolute;
+  right: 50rpx;
+  top: 50rpx;
+  line-height: 48rpx;
+}
+
+.myetc_vehicle_plate{
+  font-size:24rpx;
+  color:#FFFFFF;
+  position: absolute;
+  right: 50rpx;
+  top: 115rpx;
+  width: 150rpx;
+  height: 50rpx;
+  text-align: center;
+}
+
+.myetc_orderId{
+  position: absolute;
+  bottom: 120rpx;
+  left: 105rpx;
+  font-size:48rpx;
+  color:#FFFFFF;
+}
+
+.myetc_info{
+  font-size:32rpx;
+  color:#FFFFFF;
+  position: absolute;
+  bottom: 46rpx;
+  left: 60rpx;
+}
+
+.myetc_wait{
+  background-color:#FF4800;
+  border: 0rpx;
+}
+
+.myetc_number{
+  font-size:28rpx;
+  color:rgba(100,100,100,1);
+  margin-left: 30rpx;
+  margin-top: 30rpx;
+}
+
+.no_data {
+  display: flex;
+  width: 750rpx;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+
+.no_data image {
+  width: 460rpx;
+  height: 340rpx;
+}
+
+.no_data text {
+  font-size: 24rpx;
+  color: rgba(150, 150, 150, 1);
+}
+

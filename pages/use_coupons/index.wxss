@@ -1,0 +1,78 @@
+
+.page_hd {
+  padding: 10rpx;
+}
+
+.use{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.use_title {
+  font-size: 32rpx;
+  color: rgba(50, 50, 50, 1);
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  padding: 20rpx 0 30rpx 0;
+}
+
+.use_qr {
+  position: relative;
+  width: 590rpx;
+  height: 590rpx;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+}
+
+.use_back{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.use_explain{
+  display: flex;
+  flex-flow: column;
+  width: 640rpx;
+}
+
+.explain_title{
+    width:750rpx;
+    height:90rpx;
+    line-height:36rpx;
+    text-align:center;
+    margin-top: 80rpx;
+}
+.explain_title text{
+  font-size:32rpx;
+  color:rgba(150,150,150,1);
+  margin: 0 10rpx 0 10rpx;
+}
+
+.explain_role{
+  font-size:22rpx;
+  color:rgba(150,150,150,1);
+  margin-bottom:30rpx;
+}
+
+.explain_line{
+    display:inline-block;
+    width:245rpx;
+    border-top:1px solid #cccccc;
+    vertical-align:10rpx;  
+}
+
+.use_erw{
+  width: 500rpx;
+  height: 500rpx;
+}

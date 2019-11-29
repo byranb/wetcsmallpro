@@ -1,0 +1,28 @@
+<view class="page">
+  <view class='page_hd'></view>
+  <view class='page_bd'>
+     <view class='order_rec'>
+      <view class='order_text'>原手机号码</view>
+      <view class='order_input'>
+        <input placeholder-class="order_input_placeholder" maxlength='11' placeholder="请输入原手机号码" value='{{originalPhone}}' disabled='{{true}}' type="number" />
+      </view>
+    </view>
+    <view class='order_rec'>
+      <view class='order_text'>新手机号码</view>
+      <view class='order_input'>
+        <input placeholder-class="order_input_placeholder" data-input-name="newPhone" maxlength='11' placeholder="请输入新手机号码" type="number" bindinput="bindKeyInput"  />
+      </view>
+    </view>
+    <view class='order_rec'>
+      <view class='order_text'>验证码</view>
+      <view class='order_input'>
+        <input placeholder-class="order_input_placeholder" data-input-name="sms" maxlength='6' placeholder="请输入验证码" type="number" bindinput="bindKeyInput" />
+        <button size='mini' class='order_sms' bindtap="getCode" >{{code}}</button>
+      </view>
+    </view>
+    <button type="primary" class='order_sub' bindtap='subMer' >提交修改</button>
+  </view>
+  <view class='page_ft'>
+  </view>
+  <van-toast id="van-toast" />
+</view>

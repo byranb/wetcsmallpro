@@ -1,0 +1,40 @@
+<view class="page">
+ <block wx:if="{{hasDate}}">
+<block wx:if="{{couponList.length > 0}}">
+  <view class='page_hd'></view>
+  <view class='page_bd'>
+    <view class='coupons' wx:for='{{couponList}}' wx:key='item' wx:for-index='i'>
+      <image class='coupons_bg' src='/images/pic/bg{{item.state}}.png'></image>
+      <!-- <image class='coupons_image' src='../../images/pic/coupons-{{item.couponMode}}.png'></image> -->
+      <view class='coupons_left'>
+        <view class='coupons_price'>￥<text>{{item.money}}</text></view>
+        <!-- <view class='coupons_limit'>满300公里可用</view> -->
+      </view>
+      <view class='coupons_info'>
+        <view class='info_title'>{{item.couponName}}</view>
+        <view class='info_explain'>{{item.couponDesc}}</view>
+        <!-- <view class='info_date {{item.state == 0?"notyet_font":"yet_font"}}'>{{item.activateTime}}</view> -->
+      </view>
+      <view class='coupons_receive'>
+        <button type='primary' bindtap='receiveCoupon' data-state='{{item.state}}' class='coupons_btn {{item.state == 0?"notyet":"yet"}}'>{{item.state == 0?'立即领取':'已领取'}}</button>
+      </view>
+    </view>
+  </view>
+  <view class='page_ft'>
+   <van-dialog use-slot show="{{ isRec }}" show-confirm-button="{{false}}" close-on-click-overlay >
+      <view class='coupons_rec'>
+      <image src='../../images/pic/close.png' class='rec_close' bindtap='resClose'></image>
+        <text class='rec_title'>请搜索\n <text style='font-size:56rpx;color:rgba(81,170,56,1);'>车主云微ETC</text> \n微信公众号使用红包</text>
+      </view>
+    </van-dialog>
+    <van-toast id="van-toast" />
+  </view>
+  </block>
+<block wx:else>
+     <view class='no_data'>
+       <image src='/images/pic/no-con.png'></image>
+      <text>暂时还没有红包</text>
+    </view>
+</block>
+</block>
+</view>

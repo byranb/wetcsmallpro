@@ -1,0 +1,57 @@
+.page{
+  background-color: #FFFFFF;
+  height:100vh;
+}
+.page_hd{
+  padding: 10px;
+}
+.login_input{
+  padding: 30rpx 30rpx 30rpx 30rpx;
+}
+.login_title{
+  font-size:46rpx;
+  font-family:MicrosoftYaHei;
+  font-weight:400;
+  color:rgba(17,17,17,1);
+  line-height:72rpx;
+  padding-left: 55rpx;
+}
+.login_btn{
+  width:520rpx;
+  height:90rpx;
+  background:rgba(81,170,56,1);
+  border-radius:10rpx;
+}
+.login_code{
+  color: #377EF6 !important;
+  border: 0 !important;
+}
+.page_ft{
+  left: 0;
+  right: 0;
+  margin:0 auto;
+  bottom: 0;
+  text-align: center;
+  position: absolute;
+  padding-bottom: 0rpx;
+}
+.login_wx{
+  display: flex;
+  flex-flow: column;
+  background-color: #ffffff !important;
+  align-items:center;
+}
+.login_wx_title{
+  color: #666666;
+  font-size:25rpx;
+  margin-bottom: 30rpx;
+}
+button::after {
+  border: none;
+}
+.login_wx_image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius:50%;
+  margin-bottom:90rpx;
+}

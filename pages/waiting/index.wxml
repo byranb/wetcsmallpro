@@ -1,0 +1,9 @@
+<view class="page">
+  <view class='page_bd'>
+    <image src='../../images/pic/waiting.png'></image>
+    <text>正在建设中，敬请期待</text>
+  </view>
+  <view class='page_ft'>
+  </view>
+
+</view>

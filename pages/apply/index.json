@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "ETC申请",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "van-transition": "../../dist/transition/index",
+    "van-dialog": "../../dist/dialog/index",
+    "van-popup": "../../dist/popup/index",
+    "van-nav-bar": "../../dist/nav-bar/index",
+    "keyboard": "/components/keyboard/keyboard"
+  }
+}

@@ -1,0 +1,211 @@
+<view class="page">
+  <view class="page_hd">
+    <view class="my_card">
+      <image class='my-card-bg' src='/images/pic/my-card.png'></image>
+      <view class='my_head'>
+        <image class='my_head_image' src="{{avatarUrl}}"></image>
+      </view>
+      <block wx:if="{{userInfo}}">
+      <!-- <image class='my_setting' wx:if="{{phone}}" src='../../images/pic/my-setting.png' bindtap='toSettings'></image> -->
+      <view class='my_info'>
+        <view class='my_info_name'>{{nickName}}</view>
+        <view class='my_info_phone' wx:if="{{phone}}">
+          {{phone}}
+        </view> 
+      </view>
+      </block>
+      <block wx:else>
+      <button size='mini' class='my_getinfo' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" >点击获取用户信息</button>
+      </block>
+      <view class='my_equity'>
+        <view class='my_equity_button'>
+          <image class='my_equity_image' src='../../images/pic/my-road.png'></image>
+          <text class='my_equity_text'>高速优惠</text>
+        </view>
+        <view class='my_equity_button'>
+          <image class='my_equity_image' src='../../images/pic/my-spead.png'></image>
+          <text class='my_equity_text'>代驾权益</text>
+        </view>
+        <view class='my_equity_button'>
+          <image class='my_equity_image' src='../../images/pic/my-car.png'></image>
+          <text class='my_equity_text'>洗车权益</text>
+        </view>
+        <view class='my_equity_button'>
+          <image class='my_equity_image' src='../../images/pic/my-video.png'></image>
+          <text class='my_equity_text'>视频权益</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page_bd">
+    <view class='etc_fun' wx:if="{{!userInfo}}" >
+          <button wx:if="{{canIUse}}" id='money' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+              <image class='etc_fun_left' src='../../images/pic/money.png'></image>
+              <view class='etc_fun_bin'>
+                <text class='etc_fun_title'>钱包</text>
+              </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+          <button wx:if="{{canIUse}}" id='club' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/club.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>ETC俱乐部</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+          <button wx:if="{{canIUse}}" id='bill' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/bill.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>申请发票</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+          <button wx:if="{{canIUse}}" id='integral' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/integral.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>我的积分</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+          <button wx:if="{{canIUse}}" id='customer' bindtap='toPush' type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/customer.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>在线客服</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+           <button wx:if="{{canIUse}}" id='qrcode' bindtap='toPush' type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/qrcode.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>下载专属二维码</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+  </view>
+    <view class='etc_fun' wx:elif="{{userInfo && !phone}}">
+       <button wx:if="{{canIUse}}" id='money' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+              <image class='etc_fun_left' src='../../images/pic/money.png'></image>
+              <view class='etc_fun_bin'>
+                <text class='etc_fun_title'>钱包</text>
+              </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+          <button wx:if="{{canIUse}}" id='club' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/club.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>ETC俱乐部</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+          <button wx:if="{{canIUse}}" id='bill' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/bill.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>申请发票</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+          <button wx:if="{{canIUse}}" id='integral' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/integral.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>我的积分</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+          <button wx:if="{{canIUse}}" id='customer' bindtap='toPush' type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/customer.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>在线客服</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+           <button wx:if="{{canIUse}}" id='qrcode' bindtap='toPush' type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/qrcode.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>下载专属二维码</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+      </view>
+    <view class='etc_fun' wx:else>
+     <button wx:if="{{canIUse}}" id='money' bindtap='toPush' type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+              <image class='etc_fun_left' src='../../images/pic/money.png'></image>
+              <view class='etc_fun_bin'>
+                <text class='etc_fun_title'>钱包</text>
+              </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+          <button wx:if="{{canIUse}}" id='club' bindtap='toPush' type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/club.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>ETC俱乐部</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+          <button wx:if="{{canIUse}}" id='bill' bindtap='toPush' type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/bill.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>申请发票</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+          <button wx:if="{{canIUse}}" id='integral' bindtap='toPush' type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/integral.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>我的积分</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+          <button wx:if="{{canIUse}}" id='customer' bindtap='toPush' type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/customer.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>在线客服</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+            <button wx:if="{{canIUse}}" id='qrcode' bindtap='toPush' type="default" class='etc_fun_btn'>
+            <view class='etc_fun_tx'>
+            <image class='etc_fun_left' src='../../images/pic/qrcode.png'></image>
+            <view class='etc_fun_bin'>
+              <text class='etc_fun_title'>下载专属二维码</text>
+            </view>
+            </view>
+            <image class='etc_fun_right' src='../../images/pic/right.png'></image>
+          </button>
+        </view>
+        <van-toast id="van-toast" />
+    </view>
+</view>

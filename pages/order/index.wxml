@@ -1,0 +1,78 @@
+<view class="page">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='page_hd'>
+      <block wx:if="{{!channel}}">
+        <view class='order_rec'>
+          <view class='order_text'>收货人姓名</view>
+          <view class='order_input'>
+            <input placeholder-class="order_input_placeholder" name="name" data-input-name="name" value='{{name}}' bindblur="" bindinput="changeInput" placeholder="请输入收货人姓名" type="text" />
+          </view>
+        </view>
+        <view class='order_rec'>
+          <view class='order_text'>收货电话</view>
+          <view class='order_input'>
+            <input placeholder-class="order_input_placeholder" name="phone" data-input-name="phone" value='{{phone}}' bindinput="changeInput" placeholder="请输入收货电话" maxlength='11' type="number" />
+          </view>
+        </view>
+        <view class='order_rec'>
+          <view class='order_text'>收货地址</view>
+          <view class='order_input'>
+            <input placeholder-class="order_input_placeholder" name="pcc" value='{{pcc}}' bindtap='popupShow' disabled='{{true}}' placeholder="请选择收货地址" type="text" />
+          </view>
+        </view>
+        <view class='order_rec'>
+          <view class='order_text'>详细地址</view>
+          <view class='order_input'>
+            <input placeholder-class="order_input_placeholder" name="address" data-input-name="address" value='{{address}}' bindinput="changeInput" placeholder="请输入详细地址" type="text" />
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        请上传你的车辆信息
+      </block>
+    </view>
+    <view class='page_bd'>
+      <view class='order_cer'>
+        <van-tabs bind:change="tabChange" color="#51AA38" active="{{carType}}" nav-class="order_tab">
+          <van-tab title="个人车辆" title-style=" font-weight: bold;">
+            <view class='order_explain'>
+              <text class='explain_title'>温馨提示：</text>
+              <text class='explain_text'>上传资料必须是车牌号对应车主的身份证和行驶证信息。\n如有疑问请拨打客服电话 400-1096-138。</text>
+            </view>
+            <view class='order_upload'>
+              <view class='upload_pic' data-file-type='{{item.id}}' wx:for="{{personPhotos}}" wx:key='item' wx:for-index='i' bindtap='chooseImage'>
+                <image class='upload_background' src='{{item.src}}'></image>
+                <image wx:if="{{item.upload}}" class='upload_sucess' src='{{item.upload}}'></image>
+                <text>{{item.text}}</text>
+              </view>
+            </view>
+            <view class='order_sub'>
+              <button type="primary" form-type="submit">提交并开通免密支付</button>
+            </view>
+          </van-tab>
+          <van-tab title="企业车辆" title-style=" font-weight: bold;">
+            <view class='order_build'>
+              <image src='../../images/pic/waiting.png'></image>
+              <text>正在建设中，敬请期待</text>
+            </view>
+            <!-- <view class='order_upload'> -->
+            <!-- <view class='upload_pic' data-file-type='{{item.id}}' wx:for="{{enterprisePhotos}}" wx:key='item' wx:for-index='i' bindtap='chooseImage'>
+              <image class='upload_background' src='{{item.src}}'></image>
+              <image wx:if="{{item.upload}}" class='upload_sucess' src='{{item.upload}}'></image>
+              <text>{{item.text}}</text>
+            </view> -->
+            <!-- </view> -->
+          </van-tab>
+        </van-tabs>
+      </view>
+
+
+      <van-popup show="{{ popup }}" position="bottom" overlay="{{ true }}" bind:close="popupClose">
+        <van-area area-list="{{ areaList }}" bind:confirm="onConfirm" bind:cancel="onCancel" />
+      </van-popup>
+      <van-toast id="van-toast" />
+    </view>
+    <!-- <view class='page_ft'>
+  </view> -->
+  </form>
+</view>

@@ -1,0 +1,51 @@
+.page_bd{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.order_rec{
+  display: flex;
+  flex-flow: row;
+  margin: 12rpx auto;
+  align-items: center;
+  justify-content: space-around;
+}
+.order_text{
+  width: 125rpx;
+  font-size:24rpx;
+  color:rgba(100,100,100,1);
+  margin-right: 20rpx;
+  text-align:right;
+}
+.order_input{
+  width:504rpx;
+  height:68rpx;
+  background-color: #ffffff;
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+.order_input input{
+  width: 100%;
+  margin: 15rpx;
+  font-size:26rpx;
+}
+.order_input_placeholder{
+  font-size:26rpx;
+}
+.order_sms{
+  height: 98%;
+  color: #377EF6 !important;
+  width: 320rpx;
+  border-radius: 0;
+}
+.order_sub{
+  width: 320rpx;
+  height: 80rpx;
+  margin: 30rpx 0 30rpx 0;
+  font-size:32rpx !important;
+}
+
+button::after {
+  border: none;
+}
